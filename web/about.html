@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/x-icon" href="photos/logo.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="photos/logo.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="photos/logo.jpg">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="logo"><a href="" target="_blank"><img src="photos/logo.jpg" width="50" height="61"></a></div>
+          <div class="menu">
+                <ul>
+                    <li><a href="https://astro-chat-8u9n.vercel.app/">Chat</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="photos/s1.jpg" style="width:100%">
+  <div class="text">Explore the Cosmos with AstroChat</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="photos/s2.jpg" style="width:100%">
+  <div class="text">Unveiling the Beauty and Mystery of Space</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="photos/s5.jpg" style="width:100%">
+  <div class="text">Get Started</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<section id="about-me" class="container">
+<div style="text-align:center">
+  <h2>
+    AstroChat
+  </h2>
+  <p>
+    Welcome to AstroChat, where the wonders of the universe come to life! 
+    <br> Our mission is to be your go-to destination for exploring the vast realms 
+    of space and uncovering the mysteries of the cosmos. Whether you're a seasoned 
+    astronomer or a curious novice, we aim to ignite your passion for the cosmos 
+    and provide a rich, educational experience.
+    <br>
+    <br>At AstroChat, we believe that understanding the universe enriches our lives 
+     and fuels our collective curiosity.Through a combination of cutting-edge technology
+     and a passion for space exploration, we bring you a one-of-a-kind platform where you
+     can delve into the latest astronomical discoveries, engage with our interactive
+     chatbot, and immerse yourself in the beauty of the cosmos.
+     <br>
+  <br>Join us on a journey through the galaxies, from the wonders of our own solar system
+  to the farthest reaches of the observable universe. Whether you're here for educational
+  purposes, the latest space news, or simply to marvel at the breathtaking visuals,
+  AstroChat is your gateway to the cosmos.<br><br>
+  </p>
+</div>
+</section>
+
+<footer>
+    <p>Author: Eshparsi Gupta, Pankhuri Thakur, Soumya Dubey<br>
+    <a href="astrochat">AstroChat</a></p>
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
